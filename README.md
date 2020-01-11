@@ -2,6 +2,9 @@
 
 Not used as an integrated Mongoose OS library, ie: not in the `libs` section of mos.yml.
 
+**WARNING** Hard coded for ESP32 hardware SPI.
+
+
 Original README below:
 
 
