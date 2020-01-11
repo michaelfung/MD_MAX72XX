@@ -1,3 +1,10 @@
+## MAX72xx LED Matrix Library adapted for Mongoose OS
+
+Not used as an integrated Mongoose OS library, ie: not in the `libs` section of mos.yml.
+
+Original README below:
+
+
 # MAX72xx LED Matrix Display Library
 
 The library implements functions that allow the MAX72xx to be used for LED matrices (64 individual LEDs), allowing the programmer to use the LED matrix as a pixel device, displaying graphics elements much like any other pixel addressable display.

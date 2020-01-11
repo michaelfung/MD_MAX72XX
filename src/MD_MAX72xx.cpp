@@ -282,24 +282,24 @@ void MD_MAX72XX::spiClearBuffer(void)
 void MD_MAX72XX::spiSend()
 {
   // initialize the SPI transaction
-  if (_hardwareSPI)
+  //if (_hardwareSPI)
     SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
   digitalWrite(_csPin, LOW);
 
   // shift out the data
-  if (_hardwareSPI)
-  {
+  //if (_hardwareSPI)
+  //{
     for (uint16_t i = 0; i < SPI_DATA_SIZE; i++)
       SPI.transfer(_spiData[i]);
-  }
-  else  // not hardware SPI - bit bash it out
-  {
-    for (uint16_t i = 0; i < SPI_DATA_SIZE; i++)
-      shiftOut(_dataPin, _clkPin, MSBFIRST, _spiData[i]);
-  }
+  //}
+  //else  // not hardware SPI - bit bash it out
+  //{
+  //  for (uint16_t i = 0; i < SPI_DATA_SIZE; i++)
+  //    shiftOut(_dataPin, _clkPin, MSBFIRST, _spiData[i]);
+  //}
 
   // end the SPI transaction
   digitalWrite(_csPin, HIGH);
-  if (_hardwareSPI)
+  //if (_hardwareSPI)
     SPI.endTransaction();
 }
